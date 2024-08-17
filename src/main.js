@@ -1,5 +1,4 @@
 import SimpleLightbox from "simplelightbox";
-import "simplelightbox/dist/simple-lightbox.min.css";
 
 import { fetchImages } from './js/pixabay-api';
 import { createGalleryCardTemplate, displayGallery, displayError, displayWarning } from './js/render-functions';
