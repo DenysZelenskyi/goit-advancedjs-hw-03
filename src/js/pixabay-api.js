@@ -1,8 +1,10 @@
-export const fetchImages = (query) => {
+export const fetchImages = function (query) {
   const API_KEY = '10567451-e89d654aa7ed9140fe488f539';
-  const URL = `https://pixabay.com/api/?per_page=10&image_type=photo&orientation=horizontal&safesearch=true&q=${query}&key=${API_KEY}`;
+  const apiBaseUrl = 'https://pixabay.com/api/';
 
-  return fetch(URL).then(res => {
+  return fetch(
+    `${apiBaseUrl}?key=${API_KEY}&q=${query}&image_type=photo&orientation=horizontal&safesearch=true`
+  ).then(res => {
     if (!res.ok) {
       throw new Error(res.status);
     }
